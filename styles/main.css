@@ -171,6 +171,7 @@ nav {
 .links a {
   background: transparent;
   display: block;
+  font-size: 1rem;
   -webkit-transform: var(--transition);
           transform: var(--transition);
   padding: 0.4rem 0.75rem;
@@ -259,8 +260,8 @@ nav {
 .grid-container {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (minmax(50rem, 2fr))[auto-fit];
-      grid-template-columns: repeat(auto-fit, minmax(50rem, 2fr));
+  -ms-grid-columns: (minmax(45rem, 2fr))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(45rem, 2fr));
 }
 
 #school-container {
@@ -280,6 +281,22 @@ nav {
   border-radius: var(--border-rad-heavy);
   padding: var(--heavy-pad);
   margin: var(--light-pad);
+}
+
+#school-container section {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 #school-container i {
@@ -331,21 +348,30 @@ nav {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
   padding: var(--light-pad);
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 
 .logo-container #eoplogo {
-  max-width: 30rem;
+  max-width: 23rem;
+  padding-top: 2rem;
 }
 
 .logo-container #fastlogo {
-  max-width: 10rem;
+  max-width: 7rem;
+  padding-top: 2rem;
+}
+
+.logo-container #cpplogo {
+  padding-top: 2rem;
+  max-height: 18rem;
 }
 
 #skills-container {
@@ -392,6 +418,8 @@ nav {
   right: 0px;
   background: var(--background-picture);
   background-size: cover;
+  -webkit-filter: blur(3px);
+          filter: blur(3px);
   z-index: -99;
 }
 
@@ -452,7 +480,7 @@ nav {
   text-transform: uppercase;
   letter-spacing: var(--letter-space);
   background-color: #1d3557;
-  color: #fae1dd;
+  color: white;
   border: none;
 }
 
@@ -466,9 +494,9 @@ nav {
   font-size: 0.8rem;
   letter-spacing: var(--letter-space);
   text-transform: capitalize;
-  background-color: #1d35576e;
-  color: #fae1dd;
+  background-color: #4a525fd5;
   border: 0px;
+  color: white;
 }
 
 .dropdown .tab-btn:hover {
@@ -486,23 +514,21 @@ nav {
 
 .tab-btn.active {
   background-color: black;
-  color: #fae1dd;
+  color: white;
 }
 
 .toggle-size {
-  max-width: 80rem !important;
+  width: 80rem !important;
+  height: 40rem !important;
 }
 
 .enlarge {
   color: #fdffb6;
 }
 
-.img-container {
-  padding: 3rem;
-}
-
 .img-container img {
-  max-width: 40rem;
+  width: 40rem;
+  height: 20rem;
 }
 
 .slideshow-container {
@@ -727,6 +753,50 @@ nav {
   }
   .links #homeLink {
     padding-top: 0rem;
+  }
+}
+
+@media screen and (max-width: 1530px) {
+  #eoplogo {
+    max-height: 10rem;
+    padding-top: 2rem;
+  }
+  #fastlogo {
+    max-height: 11rem;
+    padding-top: 2rem;
+  }
+  #cpplogo {
+    max-height: 17rem;
+  }
+}
+
+@media screen and (max-width: 1456px) {
+  #school-container {
+    max-width: 60rem;
+    width: 60rem;
+    margin: var(--med-pad) auto;
+  }
+  #orgs-container {
+    max-width: 60rem;
+    margin: var(--med-pad) auto;
+  }
+  #skills-container {
+    max-width: 60rem;
+    margin: var(--med-pad) auto;
+  }
+  #skills-container .horizontal {
+    padding-bottom: 8rem;
+  }
+  #skills-container .horizontal article {
+    padding-bottom: var(--heavy-pad);
+  }
+  .content-container {
+    max-width: 60rem;
+    margin: 0 auto;
+  }
+  .toggle-size {
+    width: 50rem !important;
+    height: 25rem !important;
   }
 }
 

@@ -22,7 +22,6 @@
   --transition: all 0.3s linear;
 
   --background-picture: url("../images/projects//helpbot/background.png");
-  // --background-picture: url("https://blog-assets.freshworks.com/freshdesk/wp-content/uploads/2019/01/23165637/Blog_Human_Chatbot.png");
   --small-font: 0.8rem;
   --letter-space: 0.25rem;
   --med-pad: 2rem;
@@ -143,6 +142,7 @@ nav {
   a {
     background: transparent;
     display: block;
+    font-size: 1rem;
     transform: var(--transition);
     padding: 0.4rem 0.75rem;
     letter-spacing: var(--letter-space);
@@ -207,7 +207,7 @@ nav {
 // About
 .grid-container {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(50rem, 2fr));
+  grid-template-columns: repeat(auto-fit, minmax(45rem, 2fr));
 }
 #school-container {
   display: flex;
@@ -218,6 +218,12 @@ nav {
   border-radius: var(--border-rad-heavy);
   padding: var(--heavy-pad);
   margin: var(--light-pad);
+  section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
   i {
     font-size: 1.5rem;
   }
@@ -249,14 +255,21 @@ nav {
 }
 .logo-container {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-evenly;
   align-items: center;
   padding: var(--light-pad);
+  flex-wrap: wrap;
   #eoplogo {
-    max-width: 30rem;
+    max-width: 23rem;
+    padding-top: 2rem;
   }
   #fastlogo {
-    max-width: 10rem;
+    max-width: 7rem;
+    padding-top: 2rem;
+  }
+  #cpplogo {
+    padding-top: 2rem;
+    max-height: 18rem;
   }
 }
 #skills-container {
@@ -296,6 +309,7 @@ nav {
     right: 0px;
     background: var(--background-picture);
     background-size: cover;
+    filter: blur(3px);
     z-index: -99;
   }
 }
@@ -338,7 +352,7 @@ nav {
     text-transform: uppercase;
     letter-spacing: var(--letter-space);
     background-color: #1d3557;
-    color: #fae1dd;
+    color: white;
     border: none;
     &:hover {
       box-shadow: var(--light-shadow);
@@ -349,9 +363,9 @@ nav {
     font-size: 0.8rem;
     letter-spacing: var(--letter-space);
     text-transform: capitalize;
-    background-color: #1d35576e;
-    color: #fae1dd;
+    background-color: #4a525fd5;
     border: 0px;
+    color: white;
     &:hover {
       box-shadow: var(--dark-shadow);
     }
@@ -367,19 +381,21 @@ nav {
 }
 .tab-btn.active {
   background-color: black;
-  color: #fae1dd;
+  color: white;
 }
 .toggle-size {
-  max-width: 80rem !important;
+  width: 80rem !important;
+  height: 40rem !important;
 }
 .enlarge {
   color: #fdffb6;
 }
 .img-container {
   img {
-    max-width: 40rem;
+    width: 40rem;
+    height: 20rem;
   }
-  padding: 3rem;
+  // padding: 3rem;
 }
 // Slideshow
 .slideshow-container {
@@ -547,7 +563,48 @@ nav {
     }
   }
 }
-
+@media screen and (max-width: 1530px) {
+  #eoplogo {
+    max-height: 10rem;
+    padding-top: 2rem;
+  }
+  #fastlogo {
+    max-height: 11rem;
+    padding-top: 2rem;
+  }
+  #cpplogo {
+    max-height: 17rem;
+  }
+}
+@media screen and (max-width: 1456px) {
+  #school-container {
+    max-width: 60rem;
+    width: 60rem;
+    margin: var(--med-pad) auto;
+  }
+  #orgs-container {
+    max-width: 60rem;
+    margin: var(--med-pad) auto;
+  }
+  #skills-container {
+    max-width: 60rem;
+    margin: var(--med-pad) auto;
+    .horizontal {
+      article {
+        padding-bottom: var(--heavy-pad);
+      }
+      padding-bottom: 8rem;
+    }
+  }
+  .content-container {
+    max-width: 60rem;
+    margin: 0 auto;
+  }
+  .toggle-size {
+    width: 50rem !important;
+    height: 25rem !important;
+  }
+}
 @keyframes pulsate-fwd {
   0% {
     transform: scale(1);
