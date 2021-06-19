@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Revised Portfolio</title>
+    <link rel="stylesheet" href="styles/main.css" />
+    <!-- Font-Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.15.3/css/all.css"
+      integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <!-- Header -->
+    <header id="home">
+      <!-- Navbar -->
+      <nav id="nav">
+        <!-- nav-center necessary for responsive toggle button -->
+        <div class="nav-center">
+          <!-- Nav Headers -->
+          <div class="nav-header">
+            <a href="#home" class="scroll-link">JOHNNY LAM</a>
+            <button class="nav-toggle"><i class="fas fa-bars"></i></button>
+          </div>
+          <!-- Nav Links -->
+          <div class="links-container">
+            <ul class="links">
+              <li><a href="#home" class="scroll-link">Home</a></li>
+              <li><a href="#about" class="scroll-link">About</a></li>
+              <li><a href="#projects" class="scroll-link">Projects</a></li>
+              <li><a href="#contact" class="open-modal">Contact</a></li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+      <!-- Banner -->
+      <div id="banner-container" class="section">
+        <div class="banner">
+          <h1>Welcome!</h1>
+          <p>
+            My name is Johnny and I am a recent graduate from Cal Poly Pomona. I
+            am seeking opportunities to enhance knowledge in all technical
+            tracks of computing in hopes of expanding on the strengths and
+            weaknesses in Computer Science.
+          </p>
+          <a href="#projects" class="scroll-link btn">My Projects</a>
+        </div>
+      </div>
+    </header>
+    <!-- About Section -->
+    <section id="about" class="section">
+      <div class="title">
+        <h1>About</h1>
+      </div>
+      <div class="grid-container">
+        <div id="school-container" class="center">
+          <h2>Education</h2>
+          <section>
+            <article>
+              <h3>California State Polytechnic University,</h3>
+              <h4>Bachelor of Science in Computer Science</h4>
+              <span>September 2017 - December 2020</span> | Pomona, United
+              States
+              <ul class="li">
+                Overall 3.83 GPA - Major 3.80 GPA
+              </ul>
+              <ul class="li">
+                Summa Cum Laude
+              </ul>
+              <ul class="li">
+                Dean's List and President's Honor List from 2017 - 2020
+              </ul>
+            </article>
+            <img src="../images/cpplogo.png" alt="CPP LOGO" />
+          </section>
+        </div>
+        <div id="orgs-container" class="center">
+          <h2>Organizations</h2>
+          <section>
+            <article>
+              <h3>Education Oppourtunity Program,<span> Member</span></h3>
+              <span>June 2017- December 2020</span>
+              <p>
+                The Educational Opportunity Program (EOP) works to promote
+                access and equity, transition, and educational opportunities for
+                low-income and first generation students who demonstrate
+                motivation and potential to succeed
+              </p>
+            </article>
+            <article>
+              <h3>Cal Poly Fast,<span> Member</span></h3>
+              <span>September 2018- December 2020</span>
+              <p>
+                The Cal Poly Pomona student chapter of High Technology and Crime
+                Investigation Association. Focuses on Digital Forensics, Cyber
+                Crime, and Cyber Security.
+              </p>
+            </article>
+            <img src="../images/eoplogo.png" alt="" />
+            <img src="../images/fastlogo.png" alt="" />
+          </section>
+        </div>
+        <div id="skills-container">
+          <h2>Skills</h2>
+          <section class="horizontal">
+            <article>
+              <h3>Programming and Software</h3>
+              <ul>
+                <li>Java</li>
+                <li>C</li>
+                <li>MySQL</li>
+                <li>JavaScript</li>
+                <li>HTML/CSS/Bootstrap</li>
+                <li>React</li>
+                <li>jQuery</li>
+              </ul>
+            </article>
+            <article>
+              <h3>Completed Courses</h3>
+              <ul>
+                <li>Cryptography and Information Security</li>
+                <li>Operating Systems</li>
+                <li>Computer Architecture and Assembly</li>
+                <li>Numerical Methods</li>
+                <li>Programming Graphical User</li>
+                <li>Interfaces</li>
+                <li>Artificial Intelligence</li>
+                <li>Object-Oriented Design and Programming</li>
+                <li>Design and Analysis of Algorithms</li>
+                <li>Linear Algebra</li>
+                <li>Database Systems</li>
+              </ul>
+            </article>
+            <article>
+              <h3>Operating Systems</h3>
+              <ul>
+                <li>Windows</li>
+                <li>Linux</li>
+                <br />
+                <h3>Other</h3>
+                <br />
+                <li>Git</li>
+                <li>Kanban Flow</li>
+                <li>OpenSSL</li>
+                <li>ERwin</li>
+                <li>TensorFlow</li>
+              </ul>
+            </article>
+          </section>
+        </div>
+      </div>
+    </section>
+    <!-- Project Section -->
+    <section id="projects">
+      <div class="title">
+        <h1>Projects</h1>
+      </div>
+      <!-- #project-list has event listener to handle different project presentation-->
+      <div class="content-container">
+        <div class="project-list">
+          <div class="dropdown">
+            <button class="dropbtn">Projects List</button>
+            <button class="tab-btn active" data-id="react">arnold-bot</button>
+            <button class="tab-btn" data-id="ruby">libmanage</button>
+            <button class="tab-btn" data-id="c">game server</button>
+            <button class="tab-btn" data-id="ai">covid predictor</button>
+          </div>
+        </div>
+        <div class="project-contents">
+          <section class="content active" id="react">
+            <article class="left-side">
+              <h2>Arnold-Bot</h2>
+              <p>
+                An artificial intelligent virtual psychiatrist aimed to
+                circumvent the significant barriers that exist to getting care,
+                chief among them the longstanding stigma associated with mental
+                illness.
+              </p>
+              <p>
+                Worked on the front-end development team to build a responsive
+                web-based application. Developed using a JavaScript library
+                called
+                <a href="https://reactjs.org/">React</a>, Google’s
+                <a href="https://firebase.google.com/">Firebase</a> for
+                deployment and authentication, and
+                <a href="https://www.postman.com/">Postman</a> for API testing.
+                I worked in a small team of 4 where I was the lead developer
+                responsible for the front-end web application design and
+                process. My team and I utilized
+                <a href="https://git-scm.com/">Git</a> for version control and
+                <a href="https://kanbanflow.com/">Kanbanflow</a> for project
+                management
+              </p>
+            </article>
+            <div class="img-container slideshow-container">
+              <img
+                src="../images/projects/helpbot/home.png"
+                alt="project imgs"
+                class="img-box mySlides1"
+              />
+              <img
+                src="../images/projects/helpbot/chat.png"
+                alt="project imgs"
+                class="img-box mySlides1"
+              />
+              <img
+                src="../images/projects/helpbot/how-it-works.png"
+                alt="project imgs"
+                class="img-box mySlides1"
+              />
+              <img
+                src="../images/projects/helpbot/core-beliefs.png"
+                alt="project imgs"
+                class="img-box mySlides1"
+              />
+              <!-- Next and previous buttons -->
+              <a class="prev">&#10094;</a>
+              <a class="next">&#10095;</a>
+
+              <div id="caption">
+                <i>Click <span class="enlarge">here</span> to enlarge</i>
+              </div>
+            </div>
+          </section>
+          <section class="content" id="ruby">
+            <article class="left-side">
+              <h2>Lib Manage</h2>
+              <p>
+                LibManage is a
+                <a href="https://en.wikipedia.org/wiki/Software_as_a_service"
+                  >SaaS</a
+                >
+                Web-based application developed for library management. It was
+                created for the employees to manage the library’s inventory of
+                books. It also allows customers to search and view a catalog of
+                books offered by the LibManage library and receive updates
+                through email on exclusive events at the library.
+              </p>
+              <p>
+                This project consisted of five members and spanned for
+                approximately five months. The website was built from scratch
+                using a web development framework called
+                <a href="https://rubyonrails.org/">Ruby on Rails</a>. The team
+                utilized the
+                <a href="https://www.scrum.org/resources/what-is-scrum"
+                  >Scrum</a
+                >
+                framework and <a href="https://git-scm.com/">Git</a> for
+                collaboration. We developed on an agile mindset during the
+                system development process which allowed for easy adapation to
+                new challenges and unexpected changes.
+              </p>
+            </article>
+            <div class="img-container slideshow-container">
+              <img
+                class="img-box mySlides2"
+                src="../images/projects/libmanage/home.png"
+                alt="project imgs"
+              />
+              <img
+                class="img-box mySlides2"
+                src="../images/projects/libmanage/catalog.png"
+                alt="project"
+                imgs
+              />
+              <img
+                class="img-box mySlides2"
+                src="../images/projects/libmanage/book.png"
+                alt="project"
+                imgs
+              />
+              <img
+                class="img-box mySlides2"
+                src="../images/projects/libmanage/search.png"
+                alt="project"
+                imgs
+              />
+              <img
+                class="img-box mySlides2"
+                src="../images/projects/libmanage/sign-in.png"
+                alt="project"
+                imgs
+              />
+              <img
+                class="img-box mySlides2"
+                src="../images/projects/libmanage/home2.png"
+                alt="project"
+                imgs
+              />
+              <img
+                class="img-box mySlides2"
+                src="../images/projects/libmanage/sign-up.png"
+                alt="project"
+                imgs
+              />
+              <!-- Next and previous buttons -->
+              <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+              <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+              <div id="caption">
+                <i>Click <span class="enlarge">here</span> to enlarge</i>
+              </div>
+            </div>
+          </section>
+          <section class="content" id="c">
+            <article class="left-side">
+              <h2>C multi threaded game server</h2>
+              <p>
+                The goal of this project was to understand the communication
+                between the application and transport layer. To host and connect
+                computers over the internet, my group and I utilized
+                <a
+                  href="https://www.ibm.com/docs/en/zvse/6.2?topic=programming-what-is-tcpip-socket-connection"
+                  >TCP/IP socket programming</a
+                >.
+              </p>
+              <p>
+                The web server was built in C and is able to handle concurrent
+                web page connections by using
+                <a
+                  href="https://www.cs.cmu.edu/afs/cs/academic/class/15492-f07/www/pthreads.html"
+                  >POSIX threads</a
+                >
+                and the
+                <a
+                  href="https://www.csl.mtu.edu/cs4411.ck/www/NOTES/process/fork/create.html"
+                  >fork</a
+                >
+                system call for concurrency and multiprocessing. This project
+                helped me become more familiar with operating systems and
+                networking concepts.
+              </p>
+            </article>
+            <div class="img-container slideshow-container">
+              <img
+                class="img-box mySlides3"
+                src="../images/projects/c-webserver/home.png"
+                alt="project"
+                imgs
+              />
+              <img
+                class="img-box mySlides3"
+                src="../images/projects/c-webserver/ninja-rpg.png"
+                alt="project"
+                imgs
+              />
+              <img
+                class="img-box mySlides3"
+                src="../images/projects/c-webserver/comment-section.png"
+                alt="project"
+                imgs
+              />
+              <img
+                class="img-box mySlides3"
+                src="../images/projects/c-webserver/slime-game.png"
+                alt="project"
+                imgs
+              />
+              <!-- Next and previous buttons -->
+              <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+              <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+              <div id="caption">
+                <i>Click <span class="enlarge">here</span> to enlarge</i>
+              </div>
+            </div>
+          </section>
+          <section class="content" id="ai">
+            <article class="left-side">
+              <h2>COVID prediction</h2>
+              <p>
+                The goal of this project is to predict COVID-19 cases in
+                California. Identifying this issue as a time series forecasting
+                project, a
+                <a href="https://en.wikipedia.org/wiki/Recurrent_neural_network"
+                  >Recurrent Neural Network (RNN)</a
+                >
+                using a specialized layer called
+                <a href="https://en.wikipedia.org/wiki/Long_short-term_memory"
+                  >Long Short Term Memory (LSTM)</a
+                >
+                was determined ideal for processing and predicting the desired
+                project outcome.
+              </p>
+              <p>
+                Specifically, this project deals with a univariate time series
+                (Total Count Confirmed) to make predictions for the future. The
+                project utilizes the
+                <a href="https://www.tensorflow.org/">TensorFlow</a> module, a
+                core open-source library, to help develop and train my machine
+                learning model, as well as using <a href="">Matplotlib</a> to
+                help visualize the data. This was developed using Python on
+                <a href="https://jupyter.org/">Jupyter Notebook</a>.
+              </p>
+            </article>
+            <div class="img-container slideshow-container">
+              <img
+                class="img-box mySlides4"
+                src="../images/projects/covid19/1.png"
+                alt="project"
+                imgs
+              />
+              <img
+                class="img-box mySlides4"
+                src="../images/projects/covid19/2.png"
+                alt="project"
+                imgs
+              />
+              <img
+                class="img-box mySlides4"
+                src="../images/projects/covid19/3.png"
+                alt="project"
+                imgs
+              />
+              <img
+                class="img-box mySlides4"
+                src="../images/projects/covid19/4.png"
+                alt="project"
+                imgs
+              />
+              <!-- Next and previous buttons -->
+              <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+              <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+              <div id="caption">
+                <i>Click <span class="enlarge">here</span> to enlarge</i>
+              </div>
+            </div>
+          </section>
+        </div>
+      </div>
+    </section>
+    <!-- Contact Modal -->
+    <div class="modal-overlay">
+      <section id="contact" clas="section">
+        <div class="title">
+          <h3>Contact Me</h3>
+        </div>
+        <div id="contact-container">
+          <a href="https://github.com/johnnyl72"
+            ><i class="fab fa-github fa-fw"></i>johnnylam72</a
+          >
+          <a href="mailto:johnnylam72@gmail.com"
+            ><i class="far fa-envelope fa-fw"></i>johnnylam72@gmail.com</a
+          >
+          <a href="https://www.linkedin.com/in/johnnyl72/"
+            ><i class="fab fa-linkedin fa-fw"></i>johnnylam72</a
+          >
+        </div>
+        <button class="close-btn"><i class="fas fa-times"></i></button>
+      </section>
+    </div>
+    <!-- Sticky Links -->
+    <button id="contact-btn">
+      <i class="far fa-envelope-open"></i>
+    </button>
+    <!-- contact me button -->
+    <a href="#home" class="scroll-link top-link">
+      <i class="fas fa-angle-up"></i>
+    </a>
+    <script src="scripts/main.js"></script>
+  </body>
+</html>
