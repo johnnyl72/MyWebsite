@@ -29,7 +29,9 @@
           <!-- Nav Links -->
           <div class="links-container">
             <ul class="links">
-              <li><a href="#home" class="scroll-link">Home</a></li>
+              <li id="homeLink">
+                <a href="#home" class="scroll-link">Home</a>
+              </li>
               <li><a href="#about" class="scroll-link">About</a></li>
               <li><a href="#projects" class="scroll-link">Projects</a></li>
               <li><a href="#contact" class="open-modal">Contact</a></li>
@@ -57,28 +59,28 @@
         <h1>About</h1>
       </div>
       <div class="grid-container">
-        <div id="school-container" class="center">
+        <div id="school-container">
           <h2>Education</h2>
           <section>
             <article>
               <h3>California State Polytechnic University,</h3>
-              <h4>Bachelor of Science in Computer Science</h4>
-              <span>September 2017 - December 2020</span> | Pomona, United
-              States
-              <ul class="li">
-                Overall 3.83 GPA - Major 3.80 GPA
-              </ul>
-              <ul class="li">
-                Summa Cum Laude
-              </ul>
-              <ul class="li">
-                Dean's List and President's Honor List from 2017 - 2020
+              <i class="title">Bachelor of Science in Computer Science</i>
+              <ul>
+                <li>
+                  <span>September 2017 - December 2020</span> | Pomona, United
+                  States
+                </li>
+                <li>Overall 3.83 GPA - Major 3.80 GPA</li>
+                <li>Summa Cum Laude</li>
+                <li>Dean's List and President's Honor List from 2017 - 2020</li>
               </ul>
             </article>
-            <img src="../images/cpplogo.png" alt="CPP LOGO" />
+            <div class="logo-container">
+              <img id="cpplogo" src="../images/cpplogo.png" alt="CPP LOGO" />
+            </div>
           </section>
         </div>
-        <div id="orgs-container" class="center">
+        <div id="orgs-container">
           <h2>Organizations</h2>
           <section>
             <article>
@@ -100,8 +102,10 @@
                 Crime, and Cyber Security.
               </p>
             </article>
-            <img src="../images/eoplogo.png" alt="" />
-            <img src="../images/fastlogo.png" alt="" />
+            <div class="logo-container">
+              <img id="eoplogo" src="../images/eoplogo.png" alt="" />
+              <img id="fastlogo" src="../images/fastlogo.png" alt="" />
+            </div>
           </section>
         </div>
         <div id="skills-container">
@@ -193,7 +197,7 @@
                 process. My team and I utilized
                 <a href="https://git-scm.com/">Git</a> for version control and
                 <a href="https://kanbanflow.com/">Kanbanflow</a> for project
-                management
+                management.
               </p>
             </article>
             <div class="img-container slideshow-container">

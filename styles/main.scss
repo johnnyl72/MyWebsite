@@ -14,7 +14,7 @@
   --peach-puff: #ffd7baff;
   --peach-crayola: #fec89aff;
   --international-orange: #b51d03;
-
+  --feldgrau-green: #455e4f;
   --light-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
   --dark-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
 
@@ -22,6 +22,14 @@
   --transition: all 0.3s linear;
 
   --background-picture: url("../images/projects//helpbot/background.png");
+  // --background-picture: url("https://blog-assets.freshworks.com/freshdesk/wp-content/uploads/2019/01/23165637/Blog_Human_Chatbot.png");
+  --small-font: 0.8rem;
+  --letter-space: 0.25rem;
+  --med-pad: 2rem;
+  --heavy-pad: 3.5rem;
+  --light-pad: 1.5rem;
+  --border-rad: 6px;
+  --border-rad-heavy: 20px;
 }
 
 // Global Styles
@@ -85,35 +93,38 @@ body {
 }
 
 // Classes
-img {
-  max-width: 25rem;
-}
-.center {
-  display: flex;
-  justify-content: space-evenly;
-  align-items: center;
-  flex-direction: column;
-}
 .horizontal {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
-  align-items: center;
+  align-items: flex-start;
+  margin: 2rem 2rem 8rem;
+  color: rgb(2, 2, 2);
+  letter-spacing: var(--letter-space);
 }
 .section {
   min-height: 100vh;
 }
 .title {
   text-align: center;
+  padding: 2.2rem 0;
 }
 // Navigation
 nav {
   background-color: white;
   transition: var(--transition);
+  padding: 1rem;
 }
 .nav-header {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  a {
+    letter-spacing: var(--letter-space);
+    font-size: var(--small-font);
+    font-weight: lighter;
+    color: var(--feldgrau-green);
+  }
 }
 .nav-toggle {
   font-size: 1.5rem;
@@ -121,6 +132,7 @@ nav {
   border: transparent;
   transition: var(--transition);
   cursor: pointer;
+  color: var(--feldgrau-green);
 }
 .links-container {
   height: 0px;
@@ -132,6 +144,12 @@ nav {
     background: transparent;
     display: block;
     transform: var(--transition);
+    padding: 0.4rem 0.75rem;
+    letter-spacing: var(--letter-space);
+    color: var(--feldgrau-green);
+  }
+  #homeLink {
+    padding-top: 1rem;
   }
 }
 .show-link {
@@ -155,43 +173,121 @@ nav {
   align-items: center;
 }
 .banner {
-  background-color: black;
+  background-color: rgba(0, 0, 0, 0.678);
   color: white;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  max-width: 35rem;
+  max-width: 40rem;
+  padding: 2rem;
+  border-radius: var(--border-rad);
+  p {
+    padding: 1.5rem 2rem;
+  }
+  .btn {
+    color: white;
+    text-transform: uppercase;
+    background: transparent;
+    padding: 1rem 0.75rem;
+    margin-top: 0.75rem;
+    letter-spacing: var(--letter-space);
+    display: inline-block;
+    transition: var(--transition);
+    border: 2px solid white;
+    cursor: pointer;
+    border-radius: var(--border-rad);
+    &:hover {
+      color: #264653;
+      background: #fae1dd;
+      border: 2px solid black;
+    }
+  }
 }
 // About
 .grid-container {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  background-color: var(--melon);
+  grid-template-columns: repeat(auto-fit, minmax(50rem, 2fr));
 }
 #school-container {
-  // background-color: var(--isabelline);
-  background-color: #ff8670;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  flex-wrap: wrap;
+  background-color: var(--isabelline);
+  border-radius: var(--border-rad-heavy);
+  padding: var(--heavy-pad);
+  margin: var(--light-pad);
+  i {
+    font-size: 1.5rem;
+  }
+  li {
+    padding-top: 0.9rem;
+  }
+  article {
+    padding-top: var(--med-pad);
+  }
+  &:hover {
+    box-shadow: var(--light-shadow);
+  }
 }
 #orgs-container {
-  // background-color: var(--misty-rose);
-  background-color: #a1baab;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  flex-wrap: wrap;
+  background-color: var(--platinum);
+  border-radius: var(--border-rad-heavy);
+  padding: var(--heavy-pad);
+  margin: var(--light-pad);
+  article {
+    padding-top: var(--med-pad);
+  }
+  &:hover {
+    box-shadow: var(--light-shadow);
+  }
+}
+.logo-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: var(--light-pad);
+  #eoplogo {
+    max-width: 30rem;
+  }
+  #fastlogo {
+    max-width: 10rem;
+  }
 }
 #skills-container {
+  border-radius: var(--border-rad-heavy);
   background: url("https://asi.cpp.edu/wp-content/uploads/2018/10/BSW_homepage.jpg");
+  background-size: cover;
+  background-position: center;
   grid-column: 1 / -1;
+  margin: var(--light-pad);
+  padding: var(--heavy-pad);
+  &:hover {
+    box-shadow: var(--light-shadow);
+  }
   h2 {
     text-align: center;
+  }
+  li {
+    padding-top: 0.4rem;
   }
 }
 // Projects
 #projects {
-  height: 100vh;
+  min-height: 100vh;
 }
 .content-container {
-  height: 100%;
+  max-height: 900rem;
+  padding: var(--heavy-pad);
   position: relative;
   &::before {
+    margin: var(--light-pad);
+    border-radius: var(--border-rad-heavy);
     content: "";
     position: absolute;
     top: 0px;
@@ -203,12 +299,64 @@ nav {
     z-index: -99;
   }
 }
+.content {
+  display: none;
+}
+.content.active {
+  margin: 0 auto;
+  padding: 2rem;
+  display: flex !important;
+  flex-wrap: wrap-reverse;
+  justify-content: space-around;
+  align-items: center;
+}
+.left-side {
+  font-size: 2rem;
+  letter-spacing: 0.2rem;
+  max-width: 60rem;
+  padding: 2rem;
+  background-color: rgba(0, 0, 0, 0.726);
+  color: white;
+  h2 {
+    padding: 2.2rem 0;
+  }
+  p {
+    padding: 1.1rem 0;
+    a {
+      color: #fdffb6;
+    }
+  }
+}
 .dropdown {
+  padding: 2.5rem;
   display: inline-block;
   width: fit-content;
   display: flex;
+  .dropbtn {
+    padding: 1rem 0.75rem;
+    font-size: 1rem;
+    text-transform: uppercase;
+    letter-spacing: var(--letter-space);
+    background-color: #1d3557;
+    color: #fae1dd;
+    border: none;
+    &:hover {
+      box-shadow: var(--light-shadow);
+    }
+  }
+  .tab-btn {
+    padding: 1rem 0.75rem;
+    font-size: 0.8rem;
+    letter-spacing: var(--letter-space);
+    text-transform: capitalize;
+    background-color: #1d35576e;
+    color: #fae1dd;
+    border: 0px;
+    &:hover {
+      box-shadow: var(--dark-shadow);
+    }
+  }
   &:hover {
-    box-shadow: var(--dark-shadow);
     .tab-btn {
       display: block !important;
     }
@@ -219,30 +367,19 @@ nav {
 }
 .tab-btn.active {
   background-color: black;
-  color: white;
-}
-.content {
-  display: none;
-}
-.content.active {
-  display: flex !important;
-  flex-wrap: wrap-reverse;
-  justify-content: space-around;
-  align-items: center;
-}
-.left-side {
-  max-width: 40rem;
+  color: #fae1dd;
 }
 .toggle-size {
   max-width: 80rem !important;
 }
 .enlarge {
-  color: white;
+  color: #fdffb6;
 }
 .img-container {
   img {
     max-width: 40rem;
   }
+  padding: 3rem;
 }
 // Slideshow
 .slideshow-container {
@@ -274,7 +411,9 @@ nav {
   text-align: center;
   i {
     font-size: 1.3rem;
+    color: white;
   }
+  padding: 1.5rem;
 }
 .next {
   right: 0;
@@ -352,6 +491,7 @@ nav {
 }
 // Sticky Buttons
 .top-link {
+  mix-blend-mode: difference;
   font-size: 2rem;
   position: fixed;
   bottom: 3rem;
@@ -369,6 +509,7 @@ nav {
   }
 }
 #contact-btn {
+  mix-blend-mode: difference;
   font-size: 2rem;
   position: fixed;
   bottom: 3rem;
@@ -401,6 +542,9 @@ nav {
   }
   .links {
     display: flex;
+    #homeLink {
+      padding-top: 0rem;
+    }
   }
 }
 
