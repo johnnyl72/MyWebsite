@@ -123,6 +123,7 @@ body:before {
 .title {
   text-align: center;
   padding: 2.2rem 0;
+  color: #2f3e46;
 }
 
 nav {
@@ -209,6 +210,7 @@ nav {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  overflow-x: hidden;
 }
 
 .banner {
@@ -255,6 +257,14 @@ nav {
   color: #264653;
   background: #fae1dd;
   border: 2px solid black;
+}
+
+#about {
+  position: relative;
+}
+
+#about .title {
+  font-size: 1.5rem;
 }
 
 .grid-container {
@@ -311,11 +321,6 @@ nav {
   padding-top: var(--med-pad);
 }
 
-#school-container:hover {
-  -webkit-box-shadow: var(--light-shadow);
-          box-shadow: var(--light-shadow);
-}
-
 #orgs-container {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -337,11 +342,6 @@ nav {
 
 #orgs-container article {
   padding-top: var(--med-pad);
-}
-
-#orgs-container:hover {
-  -webkit-box-shadow: var(--light-shadow);
-          box-shadow: var(--light-shadow);
 }
 
 .logo-container {

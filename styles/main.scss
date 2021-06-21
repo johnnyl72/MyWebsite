@@ -107,6 +107,7 @@ body {
 .title {
   text-align: center;
   padding: 2.2rem 0;
+  color: #2f3e46;
 }
 // Navigation
 nav {
@@ -171,6 +172,7 @@ nav {
   display: flex;
   justify-content: center;
   align-items: center;
+  overflow-x: hidden;
 }
 .banner {
   background-color: rgba(0, 0, 0, 0.678);
@@ -205,6 +207,12 @@ nav {
   }
 }
 // About
+#about {
+  position: relative;
+  .title {
+    font-size: 1.5rem;
+  }
+}
 .grid-container {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(45rem, 2fr));
@@ -233,9 +241,6 @@ nav {
   article {
     padding-top: var(--med-pad);
   }
-  &:hover {
-    box-shadow: var(--light-shadow);
-  }
 }
 #orgs-container {
   display: flex;
@@ -248,9 +253,6 @@ nav {
   margin: var(--light-pad);
   article {
     padding-top: var(--med-pad);
-  }
-  &:hover {
-    box-shadow: var(--light-shadow);
   }
 }
 .logo-container {

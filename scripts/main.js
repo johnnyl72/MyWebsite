@@ -29,6 +29,21 @@ window.addEventListener("scroll", function () {
     navbar.classList.remove("fixed-nav");
     topLink.classList.remove("show-link");
   }
+
+  // // Parallex Scrolling
+  // const target = document.querySelectorAll(".scroll");
+  // for (let index = 0; index < target.length; index++) {
+  //   var pos = window.pageYOffset * target[index].dataset.ratex;
+  //   console.log("POSITION : " + pos);
+  //   if (target[index].dataset.direction === "vertical") {
+  //     target[index].style.transform = "translate3d(0px," + pos + "px, 0px)";
+  //   } else {
+  //     var posX = window.pageYOffset * target[index].dataset.ratex;
+  //     console.log(posX);
+  //     target[index].style.transform =
+  //       "translate3d(" + posX + "px, " + "0px, 0px)";
+  //   }
+  // }
 });
 
 // Scrolling Offset
@@ -79,7 +94,6 @@ function showSlides(n, no) {
     slideIndex[no] = x.length - 1;
   }
   for (i = 0; i < x.length; i++) {
-    console.log("running");
     x[i].style.display = "none";
   }
   x[slideIndex[no]].style.display = "block";
